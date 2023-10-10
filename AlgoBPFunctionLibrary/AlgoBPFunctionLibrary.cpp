@@ -270,8 +270,7 @@ bool UAlgoBPFunctionLibrary::Internal_GetPredicateReturnValue(const UFunction* I
 		{
 			if (const FBoolProperty* ReturnProperty = CastField<FBoolProperty>(Property))
 			{
-				const bool Value = ReturnProperty->GetPropertyValue_InContainer(InPredicateParams);
-				return Value;
+				return ReturnProperty->GetPropertyValue_InContainer(InPredicateParams);
 			}
 		}
 	}
