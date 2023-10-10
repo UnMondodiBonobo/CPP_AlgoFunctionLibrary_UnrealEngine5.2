@@ -41,7 +41,7 @@ public:
 	static UPARAM(DisplayName = "Found UObjects") TArray<UObject*> BP_FilterByPredicate_Object(
 		UObject* InOuter,
 		const TArray<UObject*>& InElementsToCheck,
-		FName InPredicateName = "");
+		FName InPredicateName);
 
 	UFUNCTION(BlueprintCallable, Category = "Predicate Blueprint Functions", DisplayName = "AllOf_Object",
 		meta = (DefaultToSelf = "InOuter"))
@@ -69,7 +69,7 @@ public:
 		meta = (DefaultToSelf = "InOuter"))
 	static UPARAM(DisplayName = "Found Instanced Struct") FInstancedStruct BP_FindByPredicate_Struct(UObject* InOuter,
 		TArray<FInstancedStruct> InElementsToCheck,
-		FName InPredicateName = "");
+		FName InPredicateName);
 
 	UFUNCTION(BlueprintCallable, Category = "Predicate Blueprint Functions",
 		DisplayName = "FilterByPredicate_Structure",
@@ -77,7 +77,7 @@ public:
 	static UPARAM(DisplayName = "Found Instanced Struct Array") TArray<FInstancedStruct> BP_FilterByPredicate_Struct(
 		UObject* InOuter,
 		TArray<FInstancedStruct> InElementsToCheck,
-		FName InPredicateName = "");
+		FName InPredicateName);
 
 	UFUNCTION(BlueprintCallable, Category = "Predicate Blueprint Functions", DisplayName = "AllOf_Structure",
 		meta = (DefaultToSelf = "InOuter"))
